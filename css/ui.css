@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* 组件ui-search */
+.ui-search {
+  width: 326px;
+  height: 38px;
+  background: url(../img/ui-search.jpg);
+  font-size: 12px;
+  position: relative;
+  z-index: 5;
+}
+.ui-search-select-box {
+  position: relative;
+  width: 69px;
+  height: 38px;
+  cursor: pointer;
+}
+.ui-search-select {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  color: #fff;
+}
+.ui-search-option-box {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  text-align: center;
+  background: #eee;
+  width: 69px;
+  display: none;
+}
+.ui-search-option:hover {
+  background: #ccc;
+}
+.ui-search input {
+  width: 216px;
+  height: 36px;
+  position: absolute;
+  top: 1px;
+  left: 69px;
+  text-indent: 4px;
+}
+.ui-search .btn {
+  width: 41px;
+  height: 38px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* ui-menu*/
+.ui-menu {
+  margin-right: 20px;
+  position: relative;
+}
+.ui-menu-title a{
+  display: block;
+  width: 190px;
+  height: 36px;
+  background: #1fa4f0;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+}
+.ui-menu-list {
+  position: absolute;
+  background: #1fa4f0;
+  width: 190px;
+  height: 423px;
+  top: 36px;
+  left: 0;
+}
+.ui-menu-list .item {
+  height: 39px;
+  line-height: 39px;
+  margin: 0 5px 0 8px;
+  font-size: 12px;
+}
+.ui-menu-list .item a {
+  color:#fff;
+}
+.ui-menu-list .item-l {
+  float: left;
+  margin-left: 8px;
+}
+.ui-menu-list .item-l {
+  display: block;
+  position: relative;
+  padding-left: 31px;
+}
+.ui-menu-list .item-l .icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  background: url(../img/icon-menu.jpg) ;
+  position: absolute;
+  left: 0;
+  margin-top: 8px;
+}
+.ui-menu-list .item-r {
+  float: right;
+}
+.ui-menu-sub {
+  width: 479px;
+  height: 364px;
+  position: absolute;
+  left: 190px;
+  top: 36px;
+  background: url(../img/bg-menu.jpg);
+  box-shadow: 5px 5px 3px rgba(0,0,0,.2);
+  padding: 30px;
+  overflow: auto;
+  display: none;
+}
+.ui-menu-sub-item {
+  display: none;
+}
+.ui-menu-sub-item .item {
+  margin-bottom: 23px;
+}
+.ui-menu-sub-item .title{
+  font-size: 16px;
+  height: 33px;
+  font-weight: 700;
+  color: #666;
+}
+.ui-menu-sub-item .content >div{
+  height: 30px;
+  float: left;
+  margin-right: 15px;
+}
+.ui-menu-sub-item .content a {
+  color:#868686;
+}
+/* ui-carousel*/
+.ui-carousel {
+  width: 544px;
+  height: 414px;
+  overflow: hidden;
+  position: relative;
+}
+.ui-carousel-pic {
+  position: absolute;
+  width: 9999px;
+  height: 414px;
+}
+.ui-carousel-pic a {
+  float: left;
+  width: 544px;
+  height: 414px;
+}
+.ui-carousel-pic a img {
+  width: 100%;
+  height: 100%;
+}
+/* 圆点导航*/
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -27px;
+}
+.dots span {
+  float: left;
+  width: 16px;
+  height: 12px;
+  background: url(../img/ui-slider-process.png) no-repeat;
+}
+.dots span:hover,
+.dots span.active {
+  background-position-x:-23px;
+}
+/*轮播图-左右箭头*/
+.arrow {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  left: 0;
+  background: url(../img/ui-slider-arrow.png);
+}
+.arrow-r {
+  left:auto;
+  right: 0;
+  background-position-x:-40px;
+}
+.arrow:hover {
+  background-color: #649eaa;
+}

@@ -1,0 +1,126 @@
+@charset "utf-8";
+/*top模块内样式*/
+.top {
+  line-height: 30px;
+}
+.top-l a {
+  display: block;
+  padding-left: 17px;
+  height: 30px;
+  background: url(../img/icon-call.png) no-repeat center left;
+  color:#868686;
+}
+.top-l a:hover {
+  color:red;
+}
+.top-r {
+
+}
+.top-r a {
+  color:#2da5e1;
+}
+/*header模块*/
+.header-l a {
+  display: block;
+}
+.header-l img {
+  height: 92px;
+}
+/*navBar模块*/
+.nav-bar {
+  font-size: 14px;
+}
+
+.nav-bar .nav-r li {
+  float: left;
+  padding-left: 10px;
+}
+.nav-bar .nav-r a {
+  display: block;
+  width: 100px;
+  height: 36px;
+  color:#fff;
+  line-height: 36px;
+}
+/*bannerBar模块内样式*/
+.banner-r-t ,
+.banner-r-b {
+  text-align: center;
+  font-size: 14px;
+}
+.banner-r-t-title,
+.banner-r-b-title {
+  height: 52px;
+  line-height: 52px;
+}
+.banner-r-t-title .icon,
+.banner-r-b-title .icon{
+  display: inline-block;
+  width: 22px;
+  height: 23px;
+  background: url(../img/icon-help.png);
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.banner-r-t-title {
+  color: #fec057;
+}
+.banner-r-b-title {
+  color: #00b3ea;
+}
+.banner-r-b-title .icon {
+  background-position-y: -22px;
+}
+.banner-r-t .content select{
+  width: 168px;
+  height: 24px;
+  border: 1px solid #dcdddd;
+  margin-bottom: 9px;
+}
+.banner-r-b .content .item {
+  float: left;
+  width: 50%;
+  height: 34px;
+  font-size: 12px;
+}
+.banner-r-b .content .item a {
+  color:#00b3ea;
+}
+/*main模块内样式*/
+.main .gg {
+  width: 248px;
+  height: 236px;
+  border: 1px solid #f4f6fa;
+}
+.main .gg .gg-header{
+  height: 38px;
+  background: #f4f6fa;
+  padding: 0 22px 0 20px;
+  line-height: 38px;
+}
+.main .gg .gg-header-title{
+  float: left;
+  color: #fec009;
+}
+.main .gg .gg-header-more {
+  float: right;
+}
+.main .gg .gg-header-more a {
+  color: #868686;
+}
+.main .gg .content {
+  padding: 24px 0 0 36px;
+  background: url(../img/list-yellow.jpg) no-repeat 17px 26px;
+}
+
+.main .gg .content a {
+  display: block;
+  height: 29px;
+  color: #969696;
+}
+.main .main-r-b  .gg .gg-header-title {
+  color: #4ab4ed;
+}
+.main .main-r-b  .gg .content {
+  background-image: url(../img/list-blue.jpg);
+}
