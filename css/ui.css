@@ -72,12 +72,26 @@
 .ui-menu-list .item {
   height: 39px;
   line-height: 39px;
-  margin: 0 5px 0 8px;
+  padding: 0 5px 0 8px;
   font-size: 12px;
+}
+.ui-menu-list .item.active {
+  background: #fff;
+}
+.ui-menu-list .item.active a {
+  color: #666;
+}
+.ui-menu-list .item a:hover {
+  color: red;
+}
+.ui-menu-list .item.active .item-l .icon {
+  background-position-x:0;
 }
 .ui-menu-list .item a {
   color:#fff;
 }
+
+
 .ui-menu-list .item-l {
   float: left;
   margin-left: 8px;
@@ -91,7 +105,7 @@
   width: 22px;
   height: 22px;
   display: block;
-  background: url(../img/icon-menu.jpg) ;
+  background: url(../img/icon-menu.jpg) -22px 0 no-repeat;
   position: absolute;
   left: 0;
   margin-top: 8px;
@@ -110,6 +124,7 @@
   padding: 30px;
   overflow: auto;
   display: none;
+  z-index: 10;
 }
 .ui-menu-sub-item {
   display: none;
@@ -163,6 +178,7 @@
   float: left;
   width: 16px;
   height: 12px;
+  cursor: pointer;
   background: url(../img/ui-slider-process.png) no-repeat;
 }
 .dots span:hover,
@@ -187,4 +203,43 @@
 }
 .arrow:hover {
   background-color: #649eaa;
+}
+
+/*ui-cascading*/
+.ui-cascading select{
+  width: 168px;
+  height: 24px;
+  border: 1px solid #dcdddd;
+  margin-bottom: 9px;
+}
+.ui-cascading-btn {
+  width: 108px;
+  height: 33px;
+  color: #fff;
+  background: #fecd09;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 33px;
+  margin: 10px auto 0;
+}
+/*ui-go-up*/
+.ui-go-up {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(100,100,100,.8) url(../img/icon-go-up.png) no-repeat center;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+.ui-go-up:hover {
+  background: rgba(100,100,100,.8);
 }

@@ -19,6 +19,9 @@
 .top-r a {
   color:#2da5e1;
 }
+.top-r a:hover {
+  color: red;
+}
 /*header模块*/
 .header-l a {
   display: block;
@@ -71,12 +74,7 @@
 .banner-r-b-title .icon {
   background-position-y: -22px;
 }
-.banner-r-t .content select{
-  width: 168px;
-  height: 24px;
-  border: 1px solid #dcdddd;
-  margin-bottom: 9px;
-}
+
 .banner-r-b .content .item {
   float: left;
   width: 50%;
@@ -86,7 +84,130 @@
 .banner-r-b .content .item a {
   color:#00b3ea;
 }
+.banner-r-b .content .item a:hover {
+  color: red;
+}
 /*main模块内样式*/
+.main .main-l-title {
+  height: 34px;
+  background: #f4f6fa;
+  font-size: 14px;
+}
+.main .main-l-title a {
+  display: block;
+  float: left;
+  width: 112px;
+  height: 34px;
+  line-height: 34px;
+  color: #00b3ea;
+  text-align: center;
+}
+.main-l-content {
+  border: 1px solid #f4f6fa;
+  height: 452px;
+}
+.main-l-content-item > .title li.active a,
+.main .main-l-title a.active {
+  background: #60bff2;
+  color: #fff;
+}
+
+/* 二级tab栏头部*/
+.main-l-content-item > .title {
+  height: 42px;
+  padding-left: 8px;
+  border-bottom: 1px solid #f4f6fa;
+  margin-bottom: 16px;
+}
+.main-l-content-item > .title li {
+  float: left;
+}
+.main-l-content-item > .title li a {
+  padding: 0 10px;
+  height: 26px;
+  line-height: 26px;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #4c4948;
+  margin-top: 8px;
+}
+
+/* 二级tab栏内容*/
+.main-l-cont-item-cont-item {
+  display: none;
+}
+.main-l-cont-item-cont-item.active {
+  display: block;
+}
+.main-l-cont-item-cont-item-top .item{
+  display: block;
+  width: 220px;
+  height: 98px;
+  padding-left: 121px;
+  float: left;
+  position: relative;
+  margin: 0 0 14px 12px;
+  font-size: 12px;
+}
+.main-l-cont-item-cont-item-top .item:hover {
+  background: #eee;
+}
+.main-l-cont-item-cont-item-top .item img {
+  width: 110px;
+  height: 98px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main-l-cont-item-cont-item-top .item .item-header {
+  padding-top: 12px;
+  height: 24px;
+  line-height: 24px;
+}
+.main-l-cont-item-cont-item-top .item .item-header-l {
+  float: left;
+  color: #0385d0;
+}
+.main-l-cont-item-cont-item-top .item .item-header-r {
+  float: right;
+  color: #979797;
+}
+.main-l-cont-item-cont-item-top .item .phone {
+  height: 16px;
+  line-height: 16px;
+  color: #666;
+}
+.main-l-cont-item-cont-item-top .item .address {
+  height: 18px;
+  line-height: 18px;
+  color: #666;
+}
+.main-l-cont-item-cont-item-mid .item {
+  height: 35px;
+  width: 350px;
+  line-height: 35px;
+  display: block;
+  float: left;
+  margin-left: 12px;
+  border-bottom: 1px dashed #dcdddd;
+  color: #666;
+}
+.main-l-cont-item-cont-item-mid .item:hover {
+  color:red;
+}
+.main-l-cont-item-cont-item-bottom {
+  text-align: center;
+  height: 61px;
+  line-height: 61px;
+}
+.main-l-cont-item-cont-item-bottom a {
+  color: #5084c4;
+}
+.main-l-cont-item-cont-item-bottom a:hover {
+  color: red;
+}
+
 .main .gg {
   width: 248px;
   height: 236px;
@@ -108,6 +229,9 @@
 .main .gg .gg-header-more a {
   color: #868686;
 }
+.main .gg .gg-header-more a:hover {
+  color:red;
+}
 .main .gg .content {
   padding: 24px 0 0 36px;
   background: url(../img/list-yellow.jpg) no-repeat 17px 26px;
@@ -117,6 +241,9 @@
   display: block;
   height: 29px;
   color: #969696;
+}
+.main .gg .content a:hover {
+  color: red;
 }
 .main .main-r-b  .gg .gg-header-title {
   color: #4ab4ed;

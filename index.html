@@ -47,10 +47,6 @@
           <!-- 一级菜单 -->
           <ul class="ui-menu-list">
             <li class="item">
-              <a href="#" class="item-l"><i class="icon"></i>内科</a>
-              <div class="item-r"><a href="#">冠心病</a> <a href="#">高血压</a></div>
-            </li>
-            <li class="item">
               <a href="#" class="item-l"><i class="icon"></i>内科1</a>
               <div class="item-r"><a href="#">冠心病</a> <a href="#">高血压</a></div>
             </li>
@@ -194,7 +190,7 @@
                 </div>
               </div>
               <div class="item">
-                <div class="title">内科3</div>
+                <div class="title">内科</div>
                 <div class="content clearfix">
                   <div><a href="#">心脑血管科&nbsp;&nbsp;|</a></div>
                   <div><a href="#">神经内科&nbsp;&nbsp;|</a></div>
@@ -247,7 +243,7 @@
                 </div>
               </div>
               <div class="item">
-                <div class="title">内科3</div>
+                <div class="title">内科</div>
                 <div class="content clearfix">
                   <div><a href="#">心脑血管科&nbsp;&nbsp;|</a></div>
                   <div><a href="#">神经内科&nbsp;&nbsp;|</a></div>
@@ -320,18 +316,22 @@
         <i class="icon"></i>快速预约
       </div>
       <div class="content">
-        <select name="area" id="area">
-          <option value="-1">医院地区</option>
-        </select>
-        <select name="area" id="area">
-          <option value="-1">医院等级1</option>
-        </select>
-        <select name="area" id="area">
-          <option value="-1">医院名称2</option>
-        </select>
-        <select name="area" id="area">
-          <option value="-1">医院科室3</option>
-        </select>
+        <div class="ui-cascading">
+          <select name="area" id="area">
+            <option value="医院地区">医院地区</option>
+          </select>
+          <select name="level" id="level">
+            <option value="医院等级">医院等级</option>
+          </select>
+          <select name="hospitalName" id="hospitalName">
+            <option value="医院名称">医院名称</option>
+          </select>
+          <select name="department" id="department">
+            <option value="医院科室">医院科室</option>
+          </select>
+          <div class="ui-cascading-btn">快速查询</div>
+        </div>
+
       </div>
     </div>
     <div class="banner-r-b">
@@ -356,7 +356,132 @@
   </div>
   <!-- main模块 -->
   <div id="main" class="main w clearfix">
-    <div class="main-l"></div>
+    <div class="main-l ui-tabs">
+      <div class="main-l-title">
+        <a href="#" class="active">医院</a>
+        <a href="#">科室</a>
+      </div>
+      <div class="main-l-content">
+        <!-- 医院item -->
+        <div class="main-l-content-item main-l-content-item-1 ui-tabs">
+          <div class="title">
+            <ul>
+              <li class="active"><a href="#">全部</a></li>
+              <li><a href="#">东城区</a></li>
+              <li><a href="#">西城区</a></li>
+              <li><a href="#">朝阳区</a></li>
+              <li><a href="#">丰台区</a></li>
+              <li><a href="#">石景山区</a></li>
+              <li><a href="#">海淀区</a></li>
+              <li><a href="#">门头沟区</a></li>
+              <li><a href="#">房山区</a></li>
+              <li><a href="#">其他</a></li>
+            </ul>
+          </div>
+          <div class="main-l-cont-item-cont">
+            <div class="main-l-cont-item-cont-item active">
+              <div class="main-l-cont-item-cont-item-top clearfix">
+                <a href="#" class="item">
+                  <img src="img/hospital-1.jpg" alt="">
+                  <div class="item-header">
+                    <div class="item-header-l">北京协和医院</div>
+                    <div class="item-header-r">【三级甲等】</div>
+                  </div>
+                  <span class="phone">电话：东院咨询台：010-69155564</span>
+                  <span class="address">【东院】北京市东城区帅府园一号 【西院】北京市西城区大木仓</span>
+                </a>
+                <a href="#" class="item">
+                  <img src="img/hospital-1.jpg" alt="">
+                  <div class="item-header">
+                    <div class="item-header-l">北京协和医院</div>
+                    <div class="item-header-r">【三级甲等】</div>
+                  </div>
+                  <span class="phone">电话：东院咨询台：010-69155564</span>
+                  <span class="address">【东院】北京市东城区帅府园一号 【西院】北京市西城区大木仓</span>
+                </a>
+                <a href="#" class="item">
+                  <img src="img/hospital-1.jpg" alt="">
+                  <div class="item-header">
+                    <div class="item-header-l">北京协和医院</div>
+                    <div class="item-header-r">【三级甲等】</div>
+                  </div>
+                  <span class="phone">电话：东院咨询台：010-69155564</span>
+                  <span class="address">【东院】北京市东城区帅府园一号 【西院】北京市西城区大木仓</span>
+                </a>
+                <a href="#" class="item">
+                  <img src="img/hospital-1.jpg" alt="">
+                  <div class="item-header">
+                    <div class="item-header-l">北京协和医院</div>
+                    <div class="item-header-r">【三级甲等】</div>
+                  </div>
+                  <span class="phone">电话：东院咨询台：010-69155564</span>
+                  <span class="address">【东院】北京市东城区帅府园一号 【西院】北京市西城区大木仓</span>
+                </a>
+              </div>
+              <div class="main-l-cont-item-cont-item-mid clearfix">
+                <a href="#" class="item">首都儿科研究所附属儿童医院&nbsp;&nbsp;【三级甲等】</a>
+                <a href="#" class="item">首都儿科研究所附属儿童医院&nbsp;&nbsp;【三级甲等】</a>
+                <a href="#" class="item">首都儿科研究所附属儿童医院&nbsp;&nbsp;【三级甲等】</a>
+                <a href="#" class="item">首都儿科研究所附属儿童医院&nbsp;&nbsp;【三级甲等】</a>
+                <a href="#" class="item">首都儿科研究所附属儿童医院&nbsp;&nbsp;【三级甲等】</a>
+                <a href="#" class="item">首都儿科研究所附属儿童医院&nbsp;&nbsp;【三级甲等】</a>
+              </div>
+              <div class="main-l-cont-item-cont-item-bottom">
+                <a href="#">更多医院</a>
+              </div>
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              东城区
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              西城区
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              朝阳区
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              丰台区
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              石景山区
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              海淀区
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              门头沟区
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              房山区其他
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              其他
+            </div>
+          </div> 
+        </div>
+        <!-- 科室item -->
+        <div class="main-l-content-item main-l-content-item-2  ui-tabs" style="display: none;">
+          <div class="title">
+            <ul>
+              <li class="active"><a href="#">科室1</a></li>
+              <li><a href="#">科室2</a></li>
+              <li><a href="#">科室3</a></li>
+            </ul>
+          </div>
+          <div class="main-l-cont-item-cont">
+            <div class="main-l-cont-item-cont-item active">
+              科室1
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              科室2
+            </div>
+            <div class="main-l-cont-item-cont-item">
+              科室3
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
     <div class="main-r-t">
       <div class="gg">
         <div class="gg-header">
@@ -396,5 +521,13 @@
   </div>
   <!-- footer模块 -->
   <div id="footer" class="footer">Copyright &copy; 2017慕课网版权所有</div>
+  <!-- ui-goheader -->
+  <div class="ui-go-up"></div>
+  <!-- <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script> -->
+  <script src="js/jquery-1.12.4.js"></script>
+  <!-- 模拟远程数据 -->
+  <script src="js/data.js"></script>
+  <script src="js/jquery.ui.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
