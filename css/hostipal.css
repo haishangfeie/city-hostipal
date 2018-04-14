@@ -1,0 +1,170 @@
+/* filter模块*/
+.filter {
+  margin-top: 20px;
+  padding: 0 31px;
+  
+}
+.filter-item {
+  margin: 21px 0;
+}
+
+.filter-item-sel,
+.filter-item-title {
+  float: left;
+  font-size: 12px;
+  line-height: 18px;
+  height: 18px;
+  color:#4c4948;
+  border-right: 1px solid #dcdddd;
+}
+
+.filter-item-title {
+  width: 79px;
+}
+.filter-item-sel {
+
+}
+.filter-item-sel > a {
+  display: block;
+  padding: 0 5px;
+  height: 18px;
+  margin: 0 11px;
+}
+.filter-item-sel > a.active {
+  background: #60bff2;
+  color: #fff;
+  font-weight: 700;
+}
+/*hospital-list模块*/
+.hospital-list {
+  padding-top: 1px; 
+}
+.hospital-list .hospital-list-item {
+  height: 175px;
+  border: 1px solid #f4f6fa;
+  margin-top: -1px;
+}
+.hospital-list .hospital-list-item:hover {
+  background: #f5fcff;
+}
+.hospital-list .hospital-list-item-l {
+  height: 175px;
+}
+.hospital-list .hospital-list-item-l >dl {
+  padding: 39px 0 0 225px;
+  position: relative;
+}
+.hospital-list .hospital-list-item-l dt {
+  height: 14px;
+  line-height: 14px;
+  margin-bottom: 12px;
+}
+.hospital-list .hospital-list-item-l dt h1 {
+  font-size: 14px;
+  color:#000;
+  float: left;
+  margin-right: 20px;
+}
+.hospital-list .hospital-list-item-l dt h3 {
+  font-size: 12px;
+  color: #f7b52c;
+  float: left;
+}
+
+.hospital-list .hospital-list-item-l .pic {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  width: 180px;
+  height: 130px;
+  overflow: hidden;
+}
+.hospital-list .hospital-list-item-l .info li {
+  line-height: 25px;
+  font-size: 12px;
+  height: 25px;
+  color:#888;
+  padding-left: 22px;
+  position: relative;
+}
+.hospital-list .hospital-list-item-l .info li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 18px;
+  background: url(../img/icon-tel.png) no-repeat;
+}
+.hospital-list .hospital-list-item-l .info li.time::before {
+  background-position: 0 -34px;
+}
+.hospital-list .hospital-list-item-l .info li.site::before {
+  background-position: 0 -17px;
+}
+.hospital-list .hospital-list-item-l .pic img {
+  width: 200px;
+}
+.hospital-list  .hospital-list-item-r .btn {
+  display: block;
+  width: 105px;
+  height: 37px;
+  background: url(../img/button-now.png) no-repeat;
+  border-radius: 3px;
+}
+/* hospital-page模块 */
+.hospital-page .hospital-page-item,
+.hospital-page .arrow-l,
+.hospital-page .arrow-r{
+  width: 23px;
+  height: 23px;
+  border-radius: 3px;
+  border: 1px solid #dcdddd;
+  background: url(../img/icon-pagination-arrow.png) no-repeat;
+  margin: 0 18px 0 19px;
+}
+.hospital-page .arrow-l {
+  background-position: 5px -14px;
+}
+.hospital-page .arrow-r {
+  background-position: 8px 5px;
+  margin-left: 5px;
+}
+.hospital-page .arrow-l:hover,
+.hospital-page .arrow-r:hover {
+  background-color: #00b3ec;
+}
+
+.hospital-page .arrow-l:hover {
+  background-position: -20px -14px;
+}
+.hospital-page .arrow-r:hover {
+  background-position: -18px 5px;
+}
+.hospital-page .hospital-page-item {
+  background: none;
+  margin: 0 14px 0 0;
+  line-height: 23px;
+}
+.hospital-page .hospital-page-item.active {
+  background-color: #00b3ec;
+  color: #fff;
+}
+.hospital-page .page-count {
+  margin: 0 19px 0 18px;
+}
+.hospital-page .page-to input{
+  width: 45px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid #dcdddd;
+  line-height: 45px\9;
+  margin-right: 15px;
+  margin-left: 5px;
+  text-align: center;
+}
+.hospital-page .page-to .btn {
+  width: 34px;
+  height: 25px;
+  background: url(../img/icon-pagination-go.png) no-repeat;
+}

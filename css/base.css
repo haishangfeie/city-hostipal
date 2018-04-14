@@ -36,11 +36,14 @@
 
 .nav-bar .nav-r li {
   float: left;
-  padding-left: 10px;
+}
+.nav-bar .nav-r li.active {
+  background: #1fa4f0;
 }
 .nav-bar .nav-r a {
   display: block;
-  width: 100px;
+  width: 120px;
+  text-align: center;
   height: 36px;
   color:#fff;
   line-height: 36px;

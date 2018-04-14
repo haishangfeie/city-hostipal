@@ -264,4 +264,134 @@
     })
     return $(this);
   }
+  // ui-paging 分页
+  $.fn.uiPaging = function(filtersCls,contentCls,paginationCls){
+    $(this).each(function(){
+      var ui = $(this);
+      var filters = $(filtersCls,ui);
+      var content = $(contentCls,ui);
+      var pagination = $(paginationCls,ui);
+      var pageItmesContainer = pagination.children('.hospital-page-item-container')
+      var count =3; // 每个分页显示内容的个数
+      var currentIndex =0; // 默认显示第一页
+      var pagesLen=0;  // 需要的分页数
+      // 默认加载全部的数据
+      var filterData = getfilterData();
+      // 计算分页
+      initPagination();
+      // 渲染内容
+      setPage();
+      // 利用事件委托给页码绑定点击事件
+      pageItmesContainer.on('click','.hospital-page-item',function(event){
+        // 获取页码
+        currentIndex = $(this).html()*1 -1;
+        // 重新渲染内容
+        setPage();
+        return false;
+      });
+      // 点击首页跳转到第一页
+      pagination.children('.first').click(function(event){
+        currentIndex = 0;
+        setPage();
+        return false;
+      })
+      // 点击尾页跳转到最后一页
+      pagination.children('.last').click(function(event){
+        currentIndex = pagesLen-1;
+        setPage();
+        return false;
+      })
+      // 点击箭头切换分页
+      pagination.children('.arrow-l').click(function(event){
+        currentIndex = currentIndex===0? currentIndex : currentIndex-1;
+        setPage();
+        return false;
+      })
+      pagination.children('.arrow-r').click(function(event){
+        currentIndex = currentIndex===(pagesLen-1)? currentIndex : currentIndex+1;
+        setPage();
+        return false;
+      })
+      // 直接输入页码跳转
+      pagination.find('.btn').click(function(event){
+        var number = pagination.find('.page-to input').val()*1;
+        if(number===number){
+          if(number>=1 && number <= pagesLen){
+            currentIndex=number-1;
+            setPage();
+          }
+        }
+        return false;
+      })
+      // 点击筛选切换激活的选项，并重新获取数据，分页并渲染页面
+      filters.on('click','.filter-item-sel a',function(event){
+        $(this)
+        .addClass('active')
+        .parent().siblings().children().removeClass('active');
+        // 重新获取数据
+        filterData = getfilterData();
+        console.log(filterData)
+        // 计算分页
+        initPagination();
+        // 渲染内容
+        setPage();
+      })
+      function getfilterData(){
+        var arr=[];
+        var data=null;
+        filters.each(function(i,ele){
+          arr.push($(this).find('.active').html());
+        });
+        data = AjaxRemoteGetData.getFilterData.apply(AjaxRemoteGetData,arr);
+        return data;
+      }
+      function initPagination(){
+        // 计算所需的分页
+        pagesLen = Math.ceil(filterData.length / count);
+        pagination.find('.page-count i').html(pagesLen);
+        // 清空原有的页码
+        pageItmesContainer.html('');
+        // 生成页码
+        for(var i=0;i<pagesLen;i++){
+          var tmpPageItem = $('<a href="#" class="hospital-page-item"></a>').html((i+1));
+          pageItmesContainer.append(tmpPageItem);
+        }
+        // 默认当前页码为1
+        currentIndex=0;
+      }
+      function setPage(){
+        var template = $('#template').html();
+        var startIndex = currentIndex * count;
+        var endIndex = (currentIndex+1) * count;
+        // 清空content中的内容
+        content.html('');
+        // 给当前页码设置样式
+        pageItmesContainer
+        .children().removeClass('active')
+        .eq(currentIndex).addClass('active');
+        for(var i=startIndex;i<endIndex;i++){
+          if(i>=filterData.length){
+            break;
+          }
+          var html = template;
+          var title=['area','level','type','name','address','phone','imgUrl','time'];
+          for(var t_i=0;t_i<title.length;t_i++){
+            html = html.replace('{{' + title[t_i] + '}}',filterData[i][t_i]);
+          }
+          // 将item插入页面
+          content.append(html);
+        }
+      }
+
+    });
+    // 分页组件的制作
+    // 1. 初始化（默认获取全部的数据）
+    // 2. 获取到数据后计算数据用分多少页，动态生成页码的界面，如果页码大于4页在页面上生成'...'表示后面还有页码，
+    // 3. 确定第一页要显示的数据，生成显示的页面
+    // 4. 点击筛选选项时重新获取数据，然后重复第二第三步
+    // 5. 点击左右箭头时切换前后切换页码
+    // 6. 如果切换出边界时，切换到下一页，同时重新生成页码页面，新的页码默认显示在中间，如果是前两页或后两页导致无法显示在中间，则可以不显示在中间
+    return $(this);
+  }
+  
 })(jQuery);

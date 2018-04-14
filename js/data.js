@@ -4,7 +4,7 @@ storage.hospital = [
 
   ['area','level','type','name','address','phone','imgUrl','time'],
 
-  ['朝阳区','三级甲等','卫生部直属医院','首都儿科研究所附属儿童医院','北京市朝阳区雅宝路2号','010-85695756','img/hospital-1.jpg','14:30'],
+  ['朝阳区','三级甲等','卫生部直属医院','首都儿科研究所附属儿童医院','北京市朝阳区雅宝路2号','85695756','img/hospital-1.jpg','14:30'],
 
   ['朝阳区','三级甲等','卫生部直属医院','中日友好医院','北京市朝阳区樱花东路2号','84205288','img/hospital-2.jpg','8:30'],
   ['西城区','三级甲等','卫生部直属医院','首都医科大学附属北京友谊医院','北京市西城区永安路95号','63016616','img/hospital-3.jpg','9:30'],
@@ -106,3 +106,37 @@ AjaxRemoteGetData.getDepartment = function(area,level,department){
   return departmentArr;
 };
 
+AjaxRemoteGetData.getFilterData = function(type,level,area){
+  var res = filter(storage.hospital,type,'type');
+  res =filter(res,level,'level');
+  res =filter(res,area,'area');
+  if(type==='全部' && level==='全部' && area==='全部'){
+    res=res.slice(1);
+  }
+  return res;
+  function filter(arr,val,heading){
+    var index = indexOf(storage.hospital[0],heading);
+    var res=[];
+    if(val !== '全部'){
+      for(var i=0;i<arr.length;i++){
+        if(arr[i][index] === val){
+          res.push(arr[i]);
+        }
+      }
+    } else {
+      for(var i=0;i<arr.length;i++){
+        res.push(arr[i]);
+      }
+    }
+    return res;
+  }
+}
+
+function indexOf(arr,val){
+  for(var i=0;i<arr.length;i++){
+    if(arr[i]===val){
+      return i;
+    }
+  }
+  return -1;
+}

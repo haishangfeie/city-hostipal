@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>城市医院预约服务平台-hospital</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/ui.css">
+  <link rel="stylesheet" href="css/hostipal.css">
+</head>
+<body>
+  <!-- top模块 -->
+  <div id="top" class="top">
+    <div class="w">
+      <div class="top-l"><a href="#">010-114/116114电话预约</a></div>
+      <div class="top-r">欢迎来到城市医院预约挂号统一平台 请&nbsp;&nbsp;&nbsp;<a href="#">登录</a>&nbsp;&nbsp;&nbsp;<a href="#">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">帮助中心</a></div>
+    </div>
+  </div>
+  <!-- header模块 -->
+  <div id="header" class="header w">
+      <div class="header-l">
+        <h1><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+      </div>
+      <div class="header-r">
+        <div class="ui-search">
+          <div class="ui-search-select-box">
+            <div class="ui-search-select">医院</div>
+            <div class="ui-search-option-box">
+              <div class="ui-search-option">科室</div>
+              <div class="ui-search-option">疾病</div>
+              <div class="ui-search-option">医院</div>
+            </div>
+          </div>
+          <input type="text" placeholder="请输入搜索内容">
+          <a href="#" class="btn">&nbsp;</a>
+        </div>
+      </div>
+  </div>
+  <!-- navBar模块 -->
+  <div id="navBar" class="nav-bar">
+    <div class="w">
+      <div class="nav-r">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li class="active"><a href="hospital.html">按医院挂号</a></li>
+          <li><a href="#">按科室挂号</a></li>
+          <li><a href="#">按疾病挂号</a></li>
+          <li><a href="#">最新公告</a></li>
+          <li><a href="#">社会知名医院</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ui-paging">
+    <!-- filter模块 -->
+    <div class="w">
+      <div class="filter" id="filter">
+        <div class="filter-item clearfix">
+          <dl>
+            <dt class="filter-item-title">医院类型</dt>
+            <dd class="filter-item-sel"><a href="#" class="active">全部</a></dd>
+            <dd class="filter-item-sel"><a href="#">卫生部直属医院</a></dd>
+            <dd class="filter-item-sel"><a href="#">北京区县属医院</a></dd>
+            <dd class="filter-item-sel"><a href="#">其他</a></dd>
+          </dl>
+        </div>
+        <div class="filter-item clearfix">
+          <dl>
+            <dt class="filter-item-title">医院等级</dt>
+            <dd class="filter-item-sel"><a href="#" class="active">全部</a></dd>
+            <dd class="filter-item-sel"><a href="#">三级甲等</a></dd>
+            <dd class="filter-item-sel"><a href="#">三级合格</a></dd>
+          </dl>
+        </div>
+        <div class="filter-item clearfix filter-item-last">
+          <dl>
+            <dt class="filter-item-title">医院位置</dt>
+            <dd class="filter-item-sel"><a href="#" class="active">全部</a></dd>
+            <dd class="filter-item-sel"><a href="#">朝阳区</a></dd>
+            <dd class="filter-item-sel"><a href="#">西城区</a></dd>
+            <dd class="filter-item-sel"><a href="#">海淀区</a></dd>
+            <dd class="filter-item-sel"><a href="#">丰台区</a></dd>
+            <dd class="filter-item-sel"><a href="#">顺义区</a></dd>
+            <dd class="filter-item-sel"><a href="#">通州区</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <!-- hospital-list模块 -->
+    <div class="w">
+      <div class="hospital-list" id="hospitalList">
+      </div>
+    </div>
+    <!-- hospital-page模块  -->
+    <div class="w">
+      <div class="hospital-page" id="hospitalPage">
+        <a href="#" class="first">首页</a>
+        <a href="#" class="arrow-l"></a>
+        <div class="hospital-page-item-container">
+
+        </div>
+        <a href="#" class="arrow-r"></a>
+        <a href="#" class="last">尾页</a>
+        <span class="page-count">共计<i></i>页</span>
+        <div class="page-to">
+          到
+          <input type="text">
+          <a href="" class="btn"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer模块 -->
+  <div id="footer" class="footer">Copyright &copy; 2017慕课网版权所有</div>
+  <!-- ui-goheader -->
+  <div class="ui-go-up"></div>
+  <!-- <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script> -->
+  <script src="js/jquery-1.12.4.js"></script>
+  <!-- 模拟远程数据 -->
+  <script src="js/data.js"></script>
+  <!-- 模板 -->
+  <script type="text/template" id="template">
+    <div class="hospital-list-item clearfix">
+      <div class="hospital-list-item-l">
+        <dl>
+          <dt class="clearfix"><h1>{{name}}</h1><h3>{{level}}</h3></dt>
+          <dd class="pic"><img src="{{imgUrl}}" alt=""></dd>
+          <dd class="info">
+            <ul>
+              <li class="time">放号时间 {{time}}</li>
+              <li class="phone">电话：010-{{phone}}</li>
+              <li class="site">地址：{{address}}</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <div class="hospital-list-item-r">
+        <a href="#" class="btn"></a>
+      </div>
+    </div>
+  </script>
+  <script src="js/jquery.ui.js"></script>
+  <script src="js/hospital.js"></script>
+</body>
+</html>
