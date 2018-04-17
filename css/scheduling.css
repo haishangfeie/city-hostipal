@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*department-plan模块*/
+.department-plan .department-plan-heading h1 {
+  font-size: 16px;
+  color: #000;
+  display: inline;
+  padding-left: 9px;
+  padding-right: 15px;
+}
+.department-plan .department-plan-heading a {
+  color: #00b3ec;
+  font-size: 14px;
+}
+.department-plan .arrow {
+  height: 44px;
+  cursor: pointer;
+}
+.department-plan .arrow-l {
+  background: url(../img/icon-scheduling-left.jpg) no-repeat 0 -1px;
+}
+.department-plan .time-frame {
+  height: 93px;
+  line-height: 93px;
+  background: #f2f8ff;
+  text-align: center;
+  font-weight: 700;
+}
+.department-plan .arrow-r {
+  background: url(../img/icon-scheduling-right.jpg) no-repeat 0 -1px;
+}
+.department-plan-content-t-p4 {
+  overflow: auto;
+}
+.department-plan-content-t-p4 .yygh-r-heading,
+.department-plan-content-t-p4 .yygh-r-item {
+  padding-left: 10px;
+}
+.department-plan-content-t-p4 .yygh-r-heading {
+  margin-top: 17px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.department-plan-content-t-p4 .yygh-r-item-l {
+  line-height: 23px;
+  height: 23px;
+  color: #555;
+  font-weight: 700;
+}
+.department-plan-content-t-p4 .yygh-r-item-r {
+  line-height: 18px;
+  color: #888;
+
+}
+.department-plan-content-t-p4 .yygh-r-item-l.yygh-r-item-l-custom {
+  margin-bottom: 15px;
+}
+
+.department-plan .department-plan-content-b p {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+
+}
+.department-plan .department-plan-content-b p span{
+  position: relative;
+  padding-left: 25px;
+}
+
+.department-plan .department-plan-content-b p span::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-info.jpg) no-repeat;
+}
+/* 排班表表格样式*/
+.department-plan .department-plan-content-t-p2 {
+  position: relative;
+  overflow: hidden;
+}
+.department-plan .form-container {
+  position: relative;
+  width: 9999px;
+  height: 100%;
+}
+.department-plan .table-plan {
+  position: absolute;
+}
+.department-plan .table-plan .table-plan-item{
+  float: left;
+  width: 94px;
+  text-align: center;
+}
+.department-plan .table-plan .table-plan-item-heading {
+  height: 44px;
+  background: #f8fafc;
+  width: 93px;
+  border-right: 1px solid #dcdddd;
+  border-bottom: 1px solid #dcdddd;
+}
+.department-plan .table-plan .table-plan-item-heading .week {
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  padding: 7px 0;
+}
+.department-plan .table-plan .table-plan-item-heading .date {
+  font-size: 10px;
+  line-height: 10px;
+  height: 10px;
+}
+.department-plan .table-plan .table-plan-item-cont {
+  width: 93px;
+  height: 92px;
+  border: 1px solid #dcdddd;
+  border-left: none;
+  margin-top: -1px;
+  line-height: 92px;
+}
+.department-plan .table-plan .table-plan-item-cont.bg {
+  background: #e0eefd;
+}

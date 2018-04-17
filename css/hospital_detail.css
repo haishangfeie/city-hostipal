@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* navBar模块 */
+.nav-bar .nav-custom {
+  float: right;
+  width: 120px;
+  text-align: center;
+  height: 36px;
+  color: #fff;
+  line-height: 36px;
+}
+.nav-bar .nav-custom:hover {
+  color:#d7f3ff;
+}
+/* hospital-address模块 */
+.hospital-address .heading {
+  color: #000;
+  font-size: 16px;
+  line-height: 52px;
+}
+.hospital-address .heading-l {
+  float: left;
+}
+.hospital-address .heading h1 {
+  font-size: 16px;
+  color: #000;
+}
+.hospital-address .heading h1 a {
+  font-size: 12px;
+  color: #f29600;
+}
+.hospital-address .heading-r {
+  float: right;
+  font-size: 12px;
+}
+.hospital-address .heading-r .key {
+  color: #00f;
+}
+.hospital-address .content {
+  position: relative;
+  padding: 22px 275px 15px 258px;
+} 
+.hospital-address .content .infos li {
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: #888;
+  position: relative;
+}
+.hospital-address .content .infos li::before {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 20px;
+  background: url(../img/icon-web.png) no-repeat;
+  left: -28px;
+}
+.hospital-address .content .infos li:nth-child(2)::before{
+  background-position: 0 -20px;
+}
+.hospital-address .content .infos li:nth-child(3)::before{
+  background-position: 0 -40px;
+}
+.hospital-address .content .infos li:nth-child(4)::before{
+  background-position: 0 -60px;
+}
+.hospital-address .content .pic1,
+.hospital-address .content .pic2 {
+  position: absolute;
+  top: 12px;
+}
+.hospital-address .content .pic1 {
+  width: 200px;
+  height: 75%;
+  left: 0;
+}
+.hospital-address .content .pic2 {
+  right: 0;
+  width: 275px;
+  height: 80%;
+}
+/*hospital-info模块*/
+.hospital-info .heading a {
+  float: left;
+  color: #60bff2;
+  font-size: 14px;
+  line-height: 30px;
+  height: 30px;
+  width: 110px;
+  text-align: center;
+}
+.hospital-info .heading a.active {
+  background: #60bff2;
+  color: #fff;
+}
+.hospital-info .content .content-item {
+  display: none;
+}
+.hospital-info .content .content-item.active {
+  display: block;
+}
+/* 预约挂号*/
+.hospital-info .content .yygh {
+  margin-top: 20px;
+
+}
+.hospital-info .content .yygh-l{
+  float: left;
+}
+.hospital-info .yygh-l {
+  width: 708px;
+
+}
+.hospital-info .yygh-l-title {
+  padding-left: 30px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+  height: 44px;
+  line-height: 44px;
+  background: #f4f6fa;
+}
+
+.hospital-info  .yygh-l-content-item {
+  border: 1px solid #f4f6fa;
+  margin-top: -1px;
+  line-height: 30px;
+  background: #f2fbff;
+
+}
+.hospital-info  .yygh-l-content-item .mzlm {
+  text-align: center;
+  color: #888;
+  width: 144px;
+  float: left;
+  font-size: 10px;
+  height: 100%;
+}
+.hospital-info  .yygh-l-content-item .zks {
+  float: left;
+  width: 557px;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 5px;
+  background: #fff;
+}
+.hospital-info  .yygh-l-content-item .zks a {
+  float: left;
+  height: 30px;
+  width: 120px;
+  color: #4c4948;
+  text-align: center;
+}
+.hospital-info .content .yygh-r{
+  float: right;
+  width: 274px;
+}
+.hospital-info .content .yygh-r .yygh-r-heading {
+  height: 41px;
+  line-height: 41px;
+  background: #f4f6fa;
+}
+.hospital-info .content .yygh-r .yygh-r-heading h3 {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.hospital-info .content .yygh-r .yygh-r-heading h3 span {
+  font-size: 12px;
+  color: #00b3ea;
+}
+.hospital-info .content .yygh-r .yygh-r-content {
+  height: 234px;
+  overflow: auto;
+  padding-top: 8px;
+}
+.hospital-info .content .yygh-r .yygh-r-content-item {
+  overflow: hidden;
+}
+.hospital-info .content .yygh-r .yygh-r-content-item-l {
+  width: 78px;
+  text-align: center;
+  line-height: 23px;
+  float: left;
+  color: #555;
+}
+.hospital-info .content .yygh-r .yygh-r-content-item-l.yygh-r-content-item-l-custom {
+  float:none;
+}
+.hospital-info .content .yygh-r .yygh-r-content-item-r {
+  float: left;
+  width: 170px;
+  
+  line-height: 18px;
+  color: #888;
+}
+.hospital-info .content .yygh-r .yygh-r-content-item-r.yygh-r-content-item-r-custom {
+  padding-left: 78px;
+}
+
+/* 停诊信息*/
+.hospital-info .tzxx table {
+  width: 100%;
+  text-align: center;
+  /* 合并边框线*/
+  border-collapse: collapse; 
+}
+
+.hospital-info .tzxx table th,
+.hospital-info .tzxx table td {
+  border: 1px solid #ccc;
+}
+
+.hospital-info .tzxx table caption h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  padding: 20px 0; 
+}
+/* 查询取消 */
+.hospital-info .cxqx .cxqx-container{
+  margin-top: 50px;
+  height: 200px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.hospital-info .cxqx .cxqx-container-wrap {
+  position: absolute;
+  width: 326px;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.hospital-info .cxqx .cxqx-container-wrap span,
+.hospital-info .cxqx .cxqx-container-wrap input,
+.hospital-info .cxqx .cxqx-container-wrap a {
+  float: left;
+  vertical-align: middle;
+}
+.hospital-info .cxqx .cxqx-container-wrap span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000;
+}
+.hospital-info .cxqx .cxqx-container-wrap input {
+  font-size: 14px;
+  line-height: 20px;
+  line-height: 20px\9;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+.hospital-info .cxqx .cxqx-container-wrap a {
+  display: block;
+  background: #60bff2;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 5px;
+  color: #fff;
+  margin-left: 5px;
+}

@@ -90,8 +90,8 @@
 }
 /*footer模块*/
 .footer {
-  height: 120px;
-  line-height: 120px;
+  height: 70px;
+  line-height: 70px;
   color:#666;
   text-align: center;
   background: #eceef2;
@@ -137,4 +137,68 @@
 }
 .hospital-page-item {
   font-size: 12px;
+}
+
+/* hospital-address模块 */
+.hospital-address {
+  background: #f7f7f7;
+  margin: 30px auto 40px;
+}
+.hospital-address .container {
+  padding: 0 25px;
+}
+.hospital-address .heading {
+  height: 52px;
+  border-bottom: 1px solid #dcdddd;
+}
+/*hospital-info模块*/
+.hospital-info {
+  margin-bottom: 80px;
+}
+.hospital-info .heading {
+  height: 30px;
+  border-bottom: 2px solid #60bff2;
+}
+/*department-plan模块*/
+.department-plan {
+  height: 431px;
+  margin-bottom: 110px;
+}
+.department-plan .department-plan-heading {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 11px;
+}
+.department-plan .department-plan-content {
+  height: 388px;
+  border: 1px solid #dcdddd;
+}
+.department-plan .department-plan-content-t {
+  height: 323px;
+}
+.department-plan .department-plan-content-b {
+  height: 64px;
+  border-top: 1px solid #dcdddd;
+}
+.department-plan .department-plan-content-t-p1,
+.department-plan .department-plan-content-t-p2,
+.department-plan .department-plan-content-t-p3,
+.department-plan .department-plan-content-t-p4 {
+  float: left;
+  height: 100%;
+}
+.department-plan .department-plan-content-t-p1 {
+  width: 35px;
+}
+.department-plan .department-plan-content-t-p2 {
+  width: 656px;
+  border: 1px solid #dcdddd;
+  margin-top: -1px;
+}
+.department-plan .department-plan-content-t-p3 {
+  width: 36px;
+}
+.department-plan .department-plan-content-t-p4 {
+  width: 268px;
+  border-left: 1px solid #dcdddd;
 }

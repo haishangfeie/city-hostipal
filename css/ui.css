@@ -25,12 +25,12 @@
   top: 38px;
   left: 0;
   text-align: center;
-  background: #eee;
+  background: #fff;
   width: 69px;
   display: none;
 }
 .ui-search-option:hover {
-  background: #ccc;
+  background: #ebeef5;
 }
 .ui-search input {
   width: 216px;
@@ -168,25 +168,25 @@
   height: 100%;
 }
 /* 圆点导航*/
-.dots {
+.ui-carousel .dots {
   position: absolute;
   bottom: 10px;
   left: 50%;
   margin-left: -27px;
 }
-.dots span {
+.ui-carousel .dots span {
   float: left;
   width: 16px;
   height: 12px;
   cursor: pointer;
   background: url(../img/ui-slider-process.png) no-repeat;
 }
-.dots span:hover,
-.dots span.active {
+.ui-carousel .dots span:hover,
+.ui-carousel .dots span.active {
   background-position-x:-23px;
 }
 /*轮播图-左右箭头*/
-.arrow {
+.ui-carousel .arrow {
   display: block;
   width: 40px;
   height: 40px;
@@ -196,12 +196,12 @@
   left: 0;
   background: url(../img/ui-slider-arrow.png);
 }
-.arrow-r {
+.ui-carousel .arrow-r {
   left:auto;
   right: 0;
   background-position-x:-40px;
 }
-.arrow:hover {
+.ui-carousel .arrow:hover {
   background-color: #649eaa;
 }
 

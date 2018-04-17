@@ -48,6 +48,9 @@
   color:#fff;
   line-height: 36px;
 }
+.nav-bar .nav-r a:hover {
+  color: #d7f3ff;
+}
 /*bannerBar模块内样式*/
 .banner-r-t ,
 .banner-r-b {

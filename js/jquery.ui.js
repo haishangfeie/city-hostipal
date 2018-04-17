@@ -393,5 +393,44 @@
     // 6. 如果切换出边界时，切换到下一页，同时重新生成页码页面，新的页码默认显示在中间，如果是前两页或后两页导致无法显示在中间，则可以不显示在中间
     return $(this);
   }
-  
+  // ui-slide
+  $.fn.uiDepartmentPlan = function(){
+    $(this).each(function(){
+      var ui = $(this);
+      var isMove = false; // 判断表格是否在滑动，滑动时点击不会滑动
+      var table = $('.table-plan',ui);
+      // 强制将left设置为0，因为在IE8中不设置left值为NaN
+      table.css('left',0);
+      // 滑动排班表
+      $('.arrow-l',ui).click(function(event){
+        // 理论是0，留有余量设为-10
+        if(parseInt(table.css('left'))>=-10 || isMove){
+          return false;
+        }
+        // 修改状态为在滑动
+        isMove = true;
+        table.animate({
+          left:"+=658px"
+        },200,function(){
+          isMove = false;
+        });
+        return false;
+      })
+      $('.arrow-r',ui).click(function(event){
+        // 理论上小于-3948，留有余量设为3940
+        if(parseInt(table.css('left'))<=-3940  || isMove){
+          return false;
+        }
+        // 修改状态为在滑动
+        isMove = true;
+        table.animate({
+          left:"-=658px"
+        },200,function(){
+          isMove = false;
+        });
+        return false;
+      })
+    })
+    return $(this);
+  }
 })(jQuery);
